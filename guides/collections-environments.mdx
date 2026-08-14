@@ -1,0 +1,45 @@
+---
+title: "Collections and environments"
+description: "Organize requests into collections and switch environments with one click."
+---
+
+Collections keep your requests organized. Environments let you reuse values such as a base URL across every request and switch between them in one click.
+
+## Collections
+
+Save any request into a collection to keep it around. Collections support:
+
+- **Folders** to group related requests
+- **Search** to find a request quickly
+- **Codebase structure** when a collection is built by [route discovery](/guides/route-discovery), so its folders mirror your project
+
+## Environments
+
+An environment is a set of named values you reference with `{{variable}}` syntax. Define a value once and use it across every request.
+
+```http
+GET {{baseUrl}}/users
+Authorization: Bearer {{token}}
+```
+
+Switch environments with one click and every `{{variable}}` resolves to the new set of values. This makes it easy to move a request between local, staging and production without editing it.
+
+<Steps>
+  <Step title="Define values">
+    Create an environment and add named values such as `baseUrl` and `token`.
+  </Step>
+  <Step title="Reference them">
+    Use `{{baseUrl}}` and `{{token}}` in your request URL, headers, params or body.
+  </Step>
+  <Step title="Switch">
+    Change the active environment and every request picks up the new values.
+  </Step>
+</Steps>
+
+<Note>
+  Imported collections bring their environments across too, so `{{baseUrl}}` in an imported request resolves right away. See [Importing](/guides/importing).
+</Note>
+
+<Tip>
+  Store secrets such as tokens with the [authentication](/guides/authentication) options rather than plain environment values, so the secret half is kept in VS Code secure storage.
+</Tip>

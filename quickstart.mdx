@@ -1,47 +1,72 @@
 ---
 title: "Quickstart"
-description: "Begin with a guide on the fastest path to a successful outcome"
+description: "Install Dragonfly and send your first request from inside VS Code."
 ---
 
-Describe how someone begins using your product. What is the first thing they need to do? Are there any prerequisites?
-
-A quickstart should take someone from zero to using your product. They'll get a quick win and a sense of what they can accomplish.
+This guide takes you from install to a working request. It should take a few minutes.
 
 ## Prerequisites
 
-Before you begin, you must have:
+Before you begin, you need:
 
-- Requirement one (for example, Node.js 18+, a free account, an API key)
-- Requirement two (for example, a compatible device, a compatible browser, a compatible operating system)
+- Visual Studio Code
+- A running API to call, or a project with Express or Next.js routes to scan
 
-## Get started
+No account or sign in is required.
+
+## Install Dragonfly
 
 <Steps>
-  <Step title="Install">
-    Describe how to install your product or sign up.
+  <Step title="Open the Marketplace">
+    Install Dragonfly from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=saurabhwankhade.dragonfly), or open Quick Open and run the install command.
 
     ```bash
-    npm install your-package
+    ext install saurabhwankhade.dragonfly
     ```
   </Step>
-  <Step title="Configure">
-    Describe any setup or configuration needed before first use.
-
-    ```bash
-    your-cli init
-    ```
-  </Step>
-  <Step title="Run it">
-    Show the first thing a user does to see it working.
-
-    ```bash
-    your-cli start
-    ```
+  <Step title="Open Dragonfly">
+    Click the Dragonfly icon in the Activity Bar to open the sidebar.
   </Step>
 </Steps>
 
-<Tip>
-  Give people a way to get help. This could be a link to a support page, a chat with a customer support agent, or a forum for your product.
+## Send your first request
 
-  Example: Need help? Reach out to us at [support@yourcompany.com](mailto:support@yourcompany.com).
+<Steps>
+  <Step title="Create a request">
+    Click **New Request**, or run **Scan Workspace for Routes** to pull requests out of your code. See [Route discovery](/guides/route-discovery).
+  </Step>
+  <Step title="Fill in the details">
+    Set the method and URL, then add any params, headers, body or auth you need.
+
+    ```http
+    GET https://api.example.com/users
+    ```
+  </Step>
+  <Step title="Send it">
+    Press **Send**. The response opens next to your code with its status, size and timing.
+  </Step>
+  <Step title="Save it">
+    Save the request into a collection to keep it around and reuse it later.
+  </Step>
+</Steps>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Route discovery" icon="/icons/search.svg" href="/guides/route-discovery">
+    Turn your Express and Next.js routes into a ready-to-send collection.
+  </Card>
+  <Card title="Collections and environments" icon="/icons/folder-tree.svg" href="/guides/collections-environments">
+    Organize requests and switch environments with one click.
+  </Card>
+  <Card title="Import your work" icon="/icons/download.svg" href="/guides/importing">
+    Bring over Postman, Thunder Client, Insomnia, HAR, OpenAPI or cURL.
+  </Card>
+  <Card title="Authentication" icon="/icons/key.svg" href="/guides/authentication">
+    Add Bearer, API key or Basic auth with secrets kept private.
+  </Card>
+</CardGroup>
+
+<Tip>
+  Need help? Reach out at [saurowankhade@gmail.com](mailto:saurowankhade@gmail.com?subject=Dragonfly). Steps to reproduce help a lot.
 </Tip>

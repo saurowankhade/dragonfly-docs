@@ -1,0 +1,59 @@
+---
+title: "Route discovery"
+description: "Scan your workspace and turn Express and Next.js routes into a collection."
+---
+
+Route discovery is what sets Dragonfly apart. Instead of typing every endpoint by hand, you point Dragonfly at your project and it reads your source for routes, then builds a collection from what it finds.
+
+## Scan a workspace
+
+<Steps>
+  <Step title="Run the command">
+    Open the Command Palette and run **Scan Workspace for Routes**, or use the scan action in the Dragonfly sidebar.
+  </Step>
+  <Step title="Review the collection">
+    Dragonfly parses your source, finds every Express and Next.js endpoint, and builds a collection you can send right away. Folders mirror your codebase structure.
+  </Step>
+  <Step title="Re-scan as you go">
+    Add a route later and run the scan again. Dragonfly picks up new and deleted routes and updates the collection.
+  </Step>
+</Steps>
+
+## Supported frameworks
+
+<CardGroup cols={2}>
+  <Card title="Express" icon="/icons/server.svg">
+    Route handlers, including nested and Router-level routes.
+  </Card>
+  <Card title="Next.js" icon="/icons/layers.svg">
+    API routes across both the App Router and the Pages Router, including route groups.
+  </Card>
+</CardGroup>
+
+For any other framework, import an OpenAPI spec, a Postman, Thunder Client or Insomnia collection, a HAR capture, or a single cURL command. See [Importing](/guides/importing).
+
+## What a scan produces
+
+A scan reads a project like this:
+
+```js routes/users.js
+router.get("/api/users", listUsers);
+router.post("/api/users", createUser);
+router.get("/api/users/:id", getUser);
+router.patch("/api/users/:id", updateUser);
+```
+
+And builds a collection of requests, foldered to match your source:
+
+```text
+GET    /api/users
+POST   /api/users
+GET    /api/users/:id
+PATCH  /api/users/:id
+```
+
+Path parameters such as `:id` are ready to fill in, and the requests are grouped into folders that follow your project layout.
+
+<Note>
+  Route discovery covers Express and Next.js today. Which framework it should learn next is driven by what people ask for. Send a request to [saurowankhade@gmail.com](mailto:saurowankhade@gmail.com?subject=Dragonfly%20route%20discovery).
+</Note>

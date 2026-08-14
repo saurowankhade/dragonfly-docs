@@ -1,0 +1,29 @@
+---
+title: "FAQ"
+description: "Common questions about testing APIs with Dragonfly, answered plainly."
+---
+
+<AccordionGroup>
+  <Accordion title="How do I test an API endpoint inside VS Code?">
+    Install Dragonfly and open it from the Activity Bar. Build the request in the sidebar with a method, URL, headers, body and auth, then press **Send**. The response opens next to your code, so there is no second app to switch to.
+  </Accordion>
+  <Accordion title="Can it find the API routes in my project automatically?">
+    Yes. Run **Scan Workspace for Routes** and Dragonfly parses your source for Express route handlers and Next.js API routes, then builds a collection from what it finds, foldered to match your codebase. Run it again after you add endpoints and it picks up the changes.
+  </Accordion>
+  <Accordion title="Which frameworks does route discovery support?">
+    Express and Next.js, covering both the App Router and the Pages Router. For anything else, import an OpenAPI spec, a Postman, Thunder Client or Insomnia collection, a HAR capture, or a single cURL command.
+  </Accordion>
+  <Accordion title="Can I import my Postman collection?">
+    Yes, and not only Postman. Import from Postman v1 or v2, Thunder Client, Insomnia, a HAR capture, an OpenAPI or Swagger spec, or a single cURL command. Run **Import Collection** and the format is detected for you. Folders, headers, query params and bodies come across, and live credentials are left out on purpose.
+  </Accordion>
+  <Accordion title="Where does my data go?">
+    Everything stays on your machine. Collections, environments and history live in VS Code storage, and tokens go into VS Code secure storage rather than a JSON file. There is no account, no sign in and no server. Only the API you are calling needs the network.
+  </Accordion>
+  <Accordion title="Is it free?">
+    Yes. No account, no paid tier, no telemetry. MIT licensed.
+  </Accordion>
+</AccordionGroup>
+
+## Still stuck?
+
+Dragonfly is in beta and built in the open. Send a bug report, a feature request, or just say hello at [saurowankhade@gmail.com](mailto:saurowankhade@gmail.com?subject=Dragonfly). Steps to reproduce help a lot, and feature requests are welcome, especially which framework route discovery should learn next.

@@ -1,34 +1,55 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mintlify Starter Kit",
+  "name": "Dragonfly",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#005FB8",
+    "light": "#4C9DF0",
+    "dark": "#0257A0"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "navigation": {
     "pages": [
       {
-        "group": "Getting Started",
+        "group": "Get started",
         "pages": [
           "index",
           "quickstart"
+        ]
+      },
+      {
+        "group": "Guides",
+        "pages": [
+          "guides/route-discovery",
+          "guides/requests",
+          "guides/collections-environments",
+          "guides/authentication",
+          "guides/importing",
+          "guides/code-export",
+          "guides/request-history"
+        ]
+      },
+      {
+        "group": "Reference",
+        "pages": [
+          "reference/commands",
+          "reference/comparison",
+          "reference/faq",
+          "reference/changelog"
         ]
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Website",
+          "href": "https://usedragonfly.xyz",
+          "icon": "globe"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "VS Code Marketplace",
+          "href": "https://marketplace.visualstudio.com/items?itemName=saurabhwankhade.dragonfly",
+          "icon": "store"
         }
       ]
     }
@@ -41,13 +62,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:saurowankhade@gmail.com?subject=Dragonfly"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Install for VS Code",
+      "href": "https://marketplace.visualstudio.com/items?itemName=saurabhwankhade.dragonfly"
     }
   },
   "contextual": {
@@ -55,18 +76,14 @@
       "copy",
       "view",
       "chatgpt",
-      "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
+      "claude"
     ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "website": "https://sauro.dev",
+      "x": "https://x.com/saurowankhade",
+      "linkedin": "https://linkedin.com/in/saurowankhade"
     }
   }
 }

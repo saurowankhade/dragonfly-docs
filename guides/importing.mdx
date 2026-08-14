@@ -1,0 +1,61 @@
+---
+title: "Importing"
+description: "Bring over Postman, Thunder Client, Insomnia, HAR, OpenAPI or cURL, with folders and details intact."
+---
+
+Already have your requests somewhere else? Bring them with you. One **Import Collection** command detects the format and pulls in folders, headers, params, bodies and environments intact, so `{{baseUrl}}` resolves right away.
+
+<Note>
+  Live credentials are left out on purpose. Re-add them with the [authentication](/guides/authentication) options after importing.
+</Note>
+
+## Supported sources
+
+<CardGroup cols={2}>
+  <Card title="Postman" icon="/icons/rocket.svg">
+    Collections in v1 and v2 format, with folders, requests, headers, query params and bodies preserved.
+  </Card>
+  <Card title="Thunder Client" icon="/icons/bolt.svg">
+    Collections and environments come across.
+  </Card>
+  <Card title="Insomnia" icon="/icons/moon.svg">
+    Collections and environments come across.
+  </Card>
+  <Card title="HAR captures" icon="/icons/file-down.svg">
+    Import a HAR file saved from your browser devtools.
+  </Card>
+  <Card title="OpenAPI and Swagger" icon="/icons/file-code.svg">
+    One request per operation, grouped into folders by tag, with path params turned into `{{variables}}`.
+  </Card>
+  <Card title="cURL" icon="/icons/terminal.svg">
+    Paste a cURL command and the request form fills itself in.
+  </Card>
+</CardGroup>
+
+## Import a collection
+
+<Steps>
+  <Step title="Run Import Collection">
+    Open the Command Palette and run **Import Collection**, then point it at your file. The format is detected for you.
+  </Step>
+  <Step title="Review the result">
+    Folders, headers, query params and bodies come across intact, and environments are brought in so `{{variable}}` values resolve.
+  </Step>
+  <Step title="Re-add secrets">
+    Live credentials are not imported. Add them back with the [authentication](/guides/authentication) options.
+  </Step>
+</Steps>
+
+## Import from cURL
+
+Paste a cURL command from Postman, browser devtools, Swagger UI or a docs page, and Dragonfly fills in the method, URL, headers and body for you.
+
+```bash
+curl https://api.example.com/users \
+  -H "Authorization: Bearer <token>" \
+  -H "Accept: application/json"
+```
+
+## Environments
+
+Postman, Thunder Client and Insomnia environments are imported alongside their collections. That means a `{{baseUrl}}` in an imported request resolves as soon as the environment is active. See [Collections and environments](/guides/collections-environments).
