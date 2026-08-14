@@ -1,55 +1,70 @@
-# Mintlify Starter Kit
+# Dragonfly Documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+Official documentation for **Dragonfly**, a free REST API client for Visual Studio Code. Dragonfly lets you send HTTP requests, organize them into collections, and scan your Express and Next.js code to build the requests for you, all without leaving the editor.
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+- Website: https://usedragonfly.xyz
+- VS Code Marketplace: https://marketplace.visualstudio.com/items?itemName=saurabhwankhade.dragonfly
+- Install command: `ext install saurabhwankhade.dragonfly`
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+## What is Dragonfly
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+Dragonfly is a REST API client built into VS Code and a lightweight alternative to Postman, Thunder Client and Insomnia. Most API clients hand you a blank request and wait for a URL. Dragonfly reads your project first: run a scan and it picks up your Express and Next.js routes, then turns them into a collection foldered to match your codebase, so the endpoints you already wrote are ready to send.
 
-## AI-assisted writing
+Everything stays on your machine. Collections, environments and request history live in VS Code storage, and tokens go into VS Code secure storage. No account, no sign in, no paid tier, no telemetry. MIT licensed.
 
-Set up your AI coding tool to work with Mintlify:
+## Key features
+
+- **Request builder** for method, URL, params, headers, body and auth, docked in the Activity Bar
+- **Route discovery** that scans Express and Next.js routes (App Router and Pages Router) and builds a collection from them
+- **Collection import** from Postman, Thunder Client, Insomnia and HAR
+- **OpenAPI and Swagger import**, one request per operation grouped into folders by tag
+- **cURL import** that fills the request form from a pasted command
+- **Environments** with `{{variable}}` substitution and one-click switching
+- **Authentication** with Bearer Token, API Key and Basic Auth, secrets kept in VS Code secure storage
+- **Copy as code** to export any request as cURL, Node.js, Python, Go, PHP, Java or Rust
+- **Request history** saved automatically to the Activity view
+
+## Documentation
+
+This site is built with [Mintlify](https://mintlify.com). Pages are MDX files with YAML frontmatter, and configuration lives in `docs.json`.
+
+| Section | Pages |
+| --- | --- |
+| Get started | Introduction, Quickstart |
+| Guides | Route discovery, Request builder, Collections and environments, Authentication, Importing, Copy as code, Request history |
+| Reference | Commands, How it compares, FAQ, Changelog |
+
+## Local development
+
+Install the [Mintlify CLI](https://www.npmjs.com/package/mint):
 
 ```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the [AI tools guides](/ai-tools) for tool-specific setup.
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+Run the dev server from the project root, where `docs.json` lives:
 
-```
+```bash
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+Preview at `http://localhost:3000`. Check internal links before publishing:
 
-## Publishing changes
+```bash
+mint broken-links
+```
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+## Frequently asked questions
 
-## Need help?
+**How do I test an API endpoint inside VS Code?**
+Install Dragonfly, open it from the Activity Bar, build a request with a method, URL, headers, body and auth, then press Send. The response opens next to your code.
 
-### Troubleshooting
+**Can it find the API routes in my project automatically?**
+Yes. Run Scan Workspace for Routes and Dragonfly parses your Express and Next.js source, then builds a collection from what it finds.
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+**Is Dragonfly free?**
+Yes. No account, no paid tier, no telemetry. MIT licensed.
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+## Feedback
+
+Dragonfly is in beta. Send bug reports and feature requests to saurowankhade@gmail.com.

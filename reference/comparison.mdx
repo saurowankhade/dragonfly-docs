@@ -1,0 +1,30 @@
+---
+title: "How it compares"
+description: "Where Dragonfly differs from Postman, Thunder Client and Insomnia, and where it overlaps."
+---
+
+Postman, Thunder Client and Insomnia are all good tools. Dragonfly focuses on one job and does it well: it reads your codebase and builds your requests for you, right inside the editor. Here is where it is different, and where it overlaps.
+
+| Feature | Dragonfly | Postman | Thunder Client | Insomnia |
+| --- | :---: | :---: | :---: | :---: |
+| Runs inside VS Code | Yes | Separate app | Yes | Standalone app |
+| Builds requests by scanning your code (Express and Next.js) | Yes | No | No | No |
+| Collections foldered to match your codebase | Yes | No | No | No |
+| Auth secrets kept in VS Code secure storage | Yes | No | No | No |
+| Import Postman, OpenAPI and cURL | Yes | Yes | Yes | Yes |
+| Environments with `{{variables}}` | Yes | Yes | Yes | Yes |
+| Copy any request as code | Yes | Yes | Yes | Yes |
+| Request history built in | Yes | Yes | Yes | Yes |
+| Works with no account | Yes | No | Yes | Yes |
+| Everything stays on your machine | Yes | No | Yes | Yes |
+| Free, no paid tier | Yes | No | No | No |
+
+<Note>
+  This comparison reflects the free, out-of-the-box experience of each tool.
+</Note>
+
+## Where Dragonfly stops
+
+Dragonfly does not try to replace Postman or Insomnia for team workspaces, mock servers or scripted test suites. Knowing where it stops is part of the pitch. If your day-to-day is testing the endpoint you are working on right now, it is built for exactly that.
+
+On the roadmap: team sync for collections and environments, more frameworks for route discovery, and deeper OpenAPI and GraphQL support. What ships next is driven by what people ask for.

@@ -1,0 +1,52 @@
+---
+title: "Copy as code"
+description: "Export any request as cURL, Node.js, Python, Go, PHP, Java or Rust."
+---
+
+When you need a request in a script, copy it out as code. Dragonfly turns any request, with its method, URL, headers, params and body, into a ready-to-run snippet.
+
+## Supported languages
+
+Copy any request as code in any of these:
+
+- cURL
+- Node.js
+- Python
+- Go
+- PHP
+- Java
+- Rust
+
+## Copy a request
+
+<Steps>
+  <Step title="Open a request">
+    Select the request you want in the Dragonfly sidebar.
+  </Step>
+  <Step title="Copy as code">
+    Choose the language and copy the snippet to your clipboard.
+  </Step>
+  <Step title="Paste it">
+    Drop it into your script, test or terminal.
+  </Step>
+</Steps>
+
+## Example
+
+A request such as:
+
+```http
+GET https://api.example.com/users
+Accept: application/json
+```
+
+Copies out as cURL:
+
+```bash
+curl https://api.example.com/users \
+  -H "Accept: application/json"
+```
+
+<Tip>
+  Copy as code pairs well with [environments](/guides/collections-environments). Resolve your `{{variables}}` first, then export a snippet with the real values in place.
+</Tip>

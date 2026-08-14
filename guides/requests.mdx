@@ -1,0 +1,53 @@
+---
+title: "Request builder"
+description: "Build and send HTTP requests from the Activity Bar, and read the response next to your code."
+---
+
+Dragonfly gives you a full request builder inside VS Code. Pick a method, set the URL, add what you need, and press **Send**. The response opens next to your code, so there is no second app to switch to.
+
+<Frame caption="A request and its JSON response, side by side with your code.">
+  <img src="/images/product-shot.png" alt="Dragonfly request builder in the VS Code sidebar with the response shown next to the editor" />
+</Frame>
+
+## Build a request
+
+A request is made of these parts:
+
+<CardGroup cols={2}>
+  <Card title="Method and URL" icon="/icons/link.svg">
+    Choose GET, POST, PUT, PATCH or DELETE, and set the URL. Use `{{variables}}` from your environment anywhere in the URL.
+  </Card>
+  <Card title="Params" icon="/icons/list.svg">
+    Add query parameters as key and value pairs. They are kept in sync with the URL.
+  </Card>
+  <Card title="Headers" icon="/icons/table.svg">
+    Set request headers such as `Content-Type` or `Accept`.
+  </Card>
+  <Card title="Body" icon="/icons/braces.svg">
+    Send a JSON or raw body for methods that take one.
+  </Card>
+  <Card title="Auth" icon="/icons/key.svg">
+    Add Bearer, API key or Basic auth. See [Authentication](/guides/authentication).
+  </Card>
+  <Card title="Send" icon="/icons/send.svg">
+    Run the request and read the response inline.
+  </Card>
+</CardGroup>
+
+## Read the response
+
+When a request returns, Dragonfly shows the response next to your code with:
+
+- **Status** of the response
+- **Size** of the payload
+- **Timing** for how long the request took
+
+The body is rendered so you can read JSON responses clearly.
+
+## Reuse a request
+
+Save any request into a collection to keep it around, then open or resend it whenever you need it. Every request you send is also saved to [Request history](/guides/request-history) automatically.
+
+<Tip>
+  Need the same request in a script? Copy it out as cURL, Node.js, Python, Go, PHP, Java or Rust. See [Copy as code](/guides/code-export).
+</Tip>
