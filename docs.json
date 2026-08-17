@@ -34,8 +34,7 @@
         "pages": [
           "reference/commands",
           "reference/comparison",
-          "reference/faq",
-          "reference/changelog"
+          "reference/faq"
         ]
       }
     ],
